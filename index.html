@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-theme = 'light'>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geomatery genius</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+
+
+</head>
+<body class="bg-white m-8">
+    <header>
+
+    </header>
+    <main>
+        <!-- main content container -->
+         <div class="flex flex-col md:flex-row gap-24">
+            <!-- shape card container -->
+             <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                <!-- triangle container -->
+                 <div class="card bg-base-100 w-96 shadow-xl">
+  <figure class="px-10 pt-10">
+    <img
+      src="/geometry-genius/images/triangle.png"
+      alt="Shoes"
+      class="rounded-xl" />
+  </figure>
+  <div class="card-body">
+    <h2 class="card-title  justify-center font-bold">Triangle</h2>
+    <p class="text-center">Area (A) = 0.5 x b x h</p>
+   <div class="text-center">
+     <input id="trianlge-base" type="text" class="bg-[#F1F1F1] w-20 text-base px-2 py-1 rounded-md" placeholder="b">
+    <span class="mr-4 ml-4">cm</span>
+    <input type="text" id="triangle-height" class="bg-[#F1F1F1] w-20 text-base px-2 py-1 rounded-md" placeholder="h">
+    <span class="mr-4 ml-4">cm</span>
+   </div>
+     <div>
+      <p class="text-2xl  text-center">Area: <span id="triangle-area"></span> <span>cm <sup>2</sup></span> </p>
+     </div>
+
+
+
+    <div class="card-actions">
+      <button onclick="triangleCalculate()" class="btn w-full  bg-[#1090D8] text-white text-lg">Calculate</button>
+    </div>
+  </div>
+</div>
+
+<!-- rectangle container -->
+ <div class="card bg-base-100 w-96 shadow-xl">
+  <figure class="px-10 pt-10">
+    <img
+      src="/geometry-genius/images/rectangle.png"
+      alt="Shoes"
+      class=""/>
+  </figure>
+  <div class="card-body">
+    <h2 class="card-title font-bold justify-center">Rectangle</h2>
+    <p class="text-center">Area (A) = w x I</p>
+    <div class="text-center">
+      <input id="width" type="text" placeholder="w" class="bg-[#F1F1F1] w-20 text-base px-2 py-1 rounded-md">
+      <span class="mr-4 ml-4">cm</span>
+      <input id="length" type="text" placeholder="l" class="bg-[#F1F1F1] w-20 text-base px-2 py-1 rounded-md">
+      <span class="mr-4 ml-4">cm</span>
+    </div>
+    <div><p class="text-2xl text-center">Area: <span id="rectangle-area"></span> <span>cm <sup>2</sup></span></p></div>
+    <div class="card-actions">
+      <button onclick="rectangleArea()" class="btn  bg-[#1090D8] text-white text-lg w-full">Calculate</button>
+    </div>
+  </div>
+</div>
+
+<!-- paralelogram container -->
+ <div class="card bg-base-100 w-96 shadow-xl">
+  <figure class="px-10 pt-10">
+    <img
+      src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+      alt="Shoes"
+      class="rounded-xl" />
+  </figure>
+  <div class="card-body items-center text-center">
+    <h2 class="card-title">Shoes!</h2>
+    <p>If a dog chews shoes whose shoes does he choose?</p>
+    <div class="card-actions">
+      <button class="btn btn-primary">Buy Now</button>
+    </div>
+  </div>
+</div>
+             </div>
+             <!-- area sector container -->
+              <div class="w-96 border-2 border-gray rounded-md">
+                <h3 class="text-3xl text-center p-4">Area calculation</h3>
+              </div>
+         </div>
+    </main>
+
+    <script src="/scripts/triangle.js"></script>
+    <script src="scripts/rectangle.js"></script>
+</body>
+</html>
