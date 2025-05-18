@@ -9,6 +9,18 @@
 
 
 </head>
+
+<!-- <style>
+  #tri-card{
+    cursor: pointer;
+  }
+ #tri-card:hover{
+    background-color: pink;
+    transition-duration: 0.5;
+ }
+</style> -->
+
+
 <body class="bg-white m-8">
     <header>
 
@@ -19,7 +31,7 @@
             <!-- shape card container -->
              <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 <!-- triangle container -->
-                 <div class="card bg-base-100 w-96 shadow-xl">
+                 <div id="tri-card" class="card bg-base-100 w-80 shadow-xl">
   <figure class="px-10 pt-10">
     <img
       src="/geometry-genius/images/triangle.png"
@@ -31,12 +43,12 @@
     <p class="text-center">Area (A) = 0.5 x b x h</p>
    <div class="text-center">
      <input id="trianlge-base" type="text" class="bg-[#F1F1F1] w-20 text-base px-2 py-1 rounded-md" placeholder="b">
-    <span class="mr-4 ml-4">cm</span>
+    <span class="mr-2 ml-2">cm</span>
     <input type="text" id="triangle-height" class="bg-[#F1F1F1] w-20 text-base px-2 py-1 rounded-md" placeholder="h">
-    <span class="mr-4 ml-4">cm</span>
+    <span class="mr-2 ml-2">cm</span>
    </div>
      <div>
-      <p class="text-2xl  text-center">Area: <span id="triangle-area"></span> <span>cm <sup>2</sup></span> </p>
+      <p class="text-2xl  text-center">Area: <span id="triangle-area">0</span> <span>cm <sup>2</sup></span> </p>
      </div>
 
 
@@ -48,7 +60,7 @@
 </div>
 
 <!-- rectangle container -->
- <div class="card bg-base-100 w-96 shadow-xl">
+ <div class="card bg-base-100 w-80 mx-3 shadow-xl">
   <figure class="px-10 pt-10">
     <img
       src="/geometry-genius/images/rectangle.png"
@@ -60,11 +72,11 @@
     <p class="text-center">Area (A) = w x I</p>
     <div class="text-center">
       <input id="width" type="text" placeholder="w" class="bg-[#F1F1F1] w-20 text-base px-2 py-1 rounded-md">
-      <span class="mr-4 ml-4">cm</span>
+      <span class="mr-2 ml-2">cm</span>
       <input id="length" type="text" placeholder="l" class="bg-[#F1F1F1] w-20 text-base px-2 py-1 rounded-md">
-      <span class="mr-4 ml-4">cm</span>
+      <span class="mr-2 ml-2">cm</span>
     </div>
-    <div><p class="text-2xl text-center">Area: <span id="rectangle-area"></span> <span>cm <sup>2</sup></span></p></div>
+    <div><p class="text-2xl text-center">Area: <span id="rectangle-area">0</span> <span>cm <sup>2</sup></span></p></div>
     <div class="card-actions">
       <button onclick="rectangleArea()" class="btn  bg-[#1090D8] text-white text-lg w-full">Calculate</button>
     </div>
@@ -72,21 +84,105 @@
 </div>
 
 <!-- paralelogram container -->
- <div class="card bg-base-100 w-96 shadow-xl">
-  <figure class="px-10 pt-10">
+ <div class="card bg-base-100 w-80 mx-6 shadow-xl">
+  <figure class="px-8 pt-10">
     <img
-      src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+      src="/geometry-genius/images/parallelogram.png"
       alt="Shoes"
-      class="rounded-xl" />
+      class=""/>
   </figure>
-  <div class="card-body items-center text-center">
-    <h2 class="card-title">Shoes!</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
+  <div class="card-body">
+    <h2 class="card-title font-bold justify-center">Parallelogram</h2>
+    <p class="text-center">Area (A) = b x h</p>
+    <!-- input field -->
+     <div class="text-center">
+        <input id="para-base" type="text" placeholder="b" class="bg-[#F1F1F1] w-20 text-base px-2 py-1 rounded-md">
+        <span class="ml-2 mr-2">cm</span>
+        <input id="para-height" type="text" placeholder="h" class="bg-[#F1F1F1] w-20 text-base px-2 py-1 rounded-md">
+        <span class="m-2 mr-2">cm</span>
+     </div>
+     <p class="text-2xl text-center">Area: <span id="para-area">0</span> <span>cm <sup>2</sup></span></p>
     <div class="card-actions">
-      <button class="btn btn-primary">Buy Now</button>
+      <button onclick="parallelogramArea()" class="btn  bg-[#1090D8] text-white text-lg w-full">Calculate</button>
     </div>
   </div>
 </div>
+
+<!-- Rhombus container -->
+   <div class="card bg-base-100  w-80 mt-8 shadow-xl">
+  <figure class="px-8 pt-10">
+    <img
+      src="/geometry-genius/images/rhombus.png"
+      alt="Shoes"
+      class=""/>
+  </figure>
+  <div class="card-body">
+    <h2 class="card-title font-bold justify-center">Rhombus</h2>
+    <p class="text-center">Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub> </p>
+    <!-- input field -->
+     <div class="text-center">
+        <input id="rhom-d1" type="text" placeholder="d1" class="bg-[#F1F1F1] w-20 text-base px-2 py-1 rounded-md">
+        <span class="ml-2 mr-2">cm</span>
+        <input id="rhom-d2" type="text" placeholder="d2" class="bg-[#F1F1F1] w-20 text-base px-2 py-1 rounded-md">
+        <span class="m-2 mr-2">cm</span>
+     </div>
+     <p class="text-2xl text-center">Area: <span id="rhom-area">0</span> <span>cm <sup>2</sup></span></p>
+    <div class="card-actions">
+      <button onclick="rhombusArea()" class="btn  bg-[#1090D8] text-white text-lg w-full">Calculate</button>
+    </div>
+  </div>
+</div>
+
+<!-- pentagon container -->
+    <div class="card  bg-base-100 mx-3 w-80 mt-8 shadow-xl">
+  <figure class="px-8 pt-10">
+    <img
+      src="/geometry-genius/images/pentagon.png"
+      alt="Shoes"
+      class=""/>
+  </figure>
+  <div class="card-body">
+    <h2 class="card-title font-bold justify-center">Pentagon</h2>
+    <p class="text-center">Area (A) = 0.5 x p x b</p>
+    <!-- input field -->
+     <div class="text-center">
+        <input id="p-of-pen" type="text" placeholder="p" class="bg-[#F1F1F1] w-20 text-base px-2 py-1 rounded-md">
+        <span class="ml-2 mr-2">cm</span>
+        <input id="b-of-pen" type="text" placeholder="b" class="bg-[#F1F1F1] w-20 text-base px-2 py-1 rounded-md">
+        <span class="m-2 mr-2">cm</span>
+     </div>
+     <p class="text-2xl text-center">Area: <span id="penta-area">0</span> <span>cm <sup>2</sup></span></p>
+    <div class="card-actions">
+      <button onclick="pentagonArea()" class="btn  bg-[#1090D8] text-white text-lg w-full">Calculate</button>
+    </div>
+  </div>
+</div>
+
+<!-- ellipse container -->
+    <div class="card bg-base-100 mx-6 w-80 mt-8 shadow-xl">
+  <figure class="px-8 pt-10">
+    <img
+      src="/geometry-genius/images/ellipse.png"
+      alt="Shoes"
+      class=""/>
+  </figure>
+  <div class="card-body">
+    <h2 class="card-title font-bold justify-center">Ellipse</h2>
+    <p class="text-center">Area (A) = π x a x b</p>
+    <!-- input field -->
+     <div class="text-center">
+        <input id="ellips-a" type="text" placeholder="a" class="bg-[#F1F1F1] w-20 text-base px-2 py-1 rounded-md">
+        <span class="ml-2 mr-2">cm</span>
+        <input id="ellips-b" type="text" placeholder="b" class="bg-[#F1F1F1] w-20 text-base px-2 py-1 rounded-md">
+        <span class="m-2 mr-2">cm</span>
+     </div>
+     <p class="text-2xl text-center">Area: <span id="ellips-area">0</span> <span>cm <sup>2</sup></span></p>
+    <div class="card-actions">
+      <button onclick="ellipsArea()" class="btn  bg-[#1090D8] text-white text-lg w-full">Calculate</button>
+    </div>
+  </div>
+</div>
+
              </div>
              <!-- area sector container -->
               <div class="w-96 border-2 border-gray rounded-md">
@@ -97,5 +193,9 @@
 
     <script src="/scripts/triangle.js"></script>
     <script src="scripts/rectangle.js"></script>
+    <script src="scripts/parallelogram.js"></script>
+    <script src="scripts/rhombus.js"></script>
+    <script src="scripts/pentagon.js"></script>
+    <script src="scripts/ellips.js"></script>
 </body>
 </html>

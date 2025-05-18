@@ -32,4 +32,13 @@ function triangleCalculate(){
    const triangleArea = document.getElementById('triangle-area');
    triangleArea.innerText = area;
 
+   // document.getElementById('tri-card').addEventListener('mouseover', function(){
+   //    style.backgroundColor = 'pink';
+   // })
+
 }
+
+document.getElementById('tri-card').addEventListener('mouseover', function(){
+      style.backgroundColor = 'pink';
+   })
+
