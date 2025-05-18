@@ -38,7 +38,7 @@ function triangleCalculate(){
 
 }
 
-document.getElementById('tri-card').addEventListener('mouseover', function(){
-      style.backgroundColor = 'pink';
-   })
+// document.getElementById('tri-card').addEventListener('mouseover', function(){
+//       style.backgroundColor = 'pink';
+//    })
 
